@@ -1,0 +1,18 @@
+{
+  "name": "evolution-of-authentication-slides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "reveal.js",
+  "scripts": {
+    "preview": "node preview.js presentation.adoc",
+    "build": "npx asciidoctor-revealjs presentation.adoc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@asciidoctor/reveal.js": "^5.1.0",
+    "asciidoctor": "^3.0.4",
+    "browser-sync": "^3.0.2"
+  }
+}
