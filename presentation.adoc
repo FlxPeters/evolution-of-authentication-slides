@@ -2,6 +2,7 @@
 = The Evolution of Authentication
 Sascha Schmidt & Felix Peters
 
+// Intro / Names / Company
 A Keycloak Success Story 
 
 :revealjs_theme: white
@@ -11,57 +12,74 @@ A Keycloak Success Story
 :revealjs_totalTime: 900
 :source-highlighter: highlight.js
 
+== Where do we come from
 
-== Once upon a time
+* A dark place of distributed user pools and multiple credentials 
+** Bad off- and onboarding experience
+** Reused passwords
+    ** weak / inconsistent password strength
+    ** bad audit trail overview
+* Less to no multifactor authentication
+* LDAP with global groups shared between apps
+* Login on Application
+
+but... there is hope! We will show you how to escape this hell. 
 
 [.notes]
 --
-Let me invite you to a Journey.
-A Journey we never believed it would lead us to a stage like we have it here today.
-
-It's a story about how we transformed a grown IT landscape with several logins and systems to a secure
-single sign on experience with well defined responsibilites.
 --
 
-////
-    A dark place of distributed user pools and multiple credentials 
-        Bad off- and onboarding experience
-        Reused passwords
-        weak / inconsistent password strength
-        bad audit trail overview
-    Less to no multifactor authentication
-    LDAP with global groups shared between apps
-    Login on Application
-    but... there is hope! We will show you how to escape this hell. 
+== Introducing: Breuninger ID
 
-Introducing: Breuninger ID - The Vision (Felix)
+=== The Vision 
+[.notes]
+--
+--
 
-    Vision: 
-        End-to-End Self service (Details in the following slides)
-        The Least Privilege by default
-        Automatable and secure
-    OIDC/SAML (vs LDAP)
-    Consistent Login (vs by Application)
-    Client Roles (vs global LDAP groups)
+* End-to-End Self service (Details in the following slides)
+* The Least Privilege by default
+* Automatable and secure
+* OIDC/SAML (vs LDAP)
+* Consistent Login (vs by Application)
+* Client Roles (vs global LDAP groups)
 
-Implement / Streamlining Responsibilities (Sascha)
+== Implement / Streamlining Responsibilities
 
-    Operator / Maintenance / Monitoring
-        Show some terraform, pipelines
-        Show automation
-        Show Prometheus, Grafana
-    Developer  / Client On-boarding
-        Talk about why developers are the best choice when it comes to the on-boarding of the client as they are the ones that understand their OIDC/SAML implementation best 
-        Show client factory / merge requests
-        Well defined user model they can rely on (attributes etc.)
-    Application Owner / User On-boarding
-        Talk about why the application owner is the only person that is able to reasonable determine who should have access to his application and why neither helpdesk nor operator can fulfill this responsibility 
-        Show role assignment in client in keycloak backend
-    User / Consistent Login
-        Talk about under which circumstances a user can be responsible for not dropping his credentials into  untrustworthy forms
-        Show uniform login process vs random application login forms
-        Configure / show several MFA mechanisms
+[.notes]
+--
+--
 
-Conclusion / Punch-Line→ (Was ist unsere Message? You can do it!)
+=== Operator / Maintenance / Monitoring
+
+* Show some terraform, pipelines
+* Show automation
+* Show Prometheus, Grafana
+
+=== Developer  / Client On-boarding
+
+* Talk about why developers are the best choice when it comes to the on-boarding of the client as they are the ones that understand their OIDC/SAML implementation best 
+* Show client factory / merge requests
+* Well defined user model they can rely on (attributes etc.)
+
+=== Application Owner / User On-boarding
+
+* Talk about why the application owner is the only person that is able to reasonable determine who should have access to his application and why neither helpdesk nor operator can fulfill this responsibility 
+* Show role assignment in client in keycloak backend
+
+=== User / Consistent Login
+* Talk about under which circumstances a user can be responsible for not dropping his credentials into  untrustworthy forms
+* Show uniform login process vs random application login forms
+* Configure / show several MFA mechanisms
+
+== Conclusion
+
+Punch-Line→ (Was ist unsere Message? You can do it!)
+
+[.notes]
+--
+--
+
+[%notitle]
+== hiring
+
 We are hiring!
-////
