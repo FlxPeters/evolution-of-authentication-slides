@@ -12,22 +12,39 @@ A Keycloak Success Story
 :revealjs_totalTime: 900
 :source-highlighter: highlight.js
 
-== Where do we come from
+== Origins: Our Starting Point
 
-* A dark place of distributed user pools and multiple credentials 
-** Bad off- and onboarding experience
-** Reused passwords
-    ** weak / inconsistent password strength
-    ** bad audit trail overview
-* Less to no multifactor authentication
-* LDAP with global groups shared between apps
-* Login on Application
+[%step]
+* Emergence from a fragmented landscape of user pools and varied credentials
+* Challenges in onboarding and offboarding experiences
+* Issues stemming from reused passwords
+* Inconsistent password strength
+* Lack of comprehensive audit trails
 
-but... there is hope! We will show you how to escape this hell. 
 
-[.notes]
---
---
+[%notitle]
+=== MFA
+
+[%step]
+* Limited to no utilization of multifactor authentication
+* Dependence on LDAP with globally shared groups across applications
+* Direct login through application interfaces
+
+[%notitle]
+[%auto-animate,auto-animate-duration=2]
+=== Hope
+// Just a little bit of animation foo
+*However, there is a light at the end of the tunnel!*
+
+
+[%notitle]
+[%auto-animate,auto-animate-duration=2]
+=== Hope-2
+
+*However, there is a light at the end of the tunnel!*
+
+We're here to guide you through the path to liberation.
+
 
 == Introducing: Breuninger ID
 
