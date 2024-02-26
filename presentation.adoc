@@ -64,15 +64,15 @@ We're here to guide you through the path to liberation.
 
 [.notes]
 --
-In the upcoming slides, I'll discuss how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage effectively.
+* In the upcoming slides, I'll discuss how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage effectively.
 --
 
 == The Operator
 
 [.notes]
 --
-What expertise does an operator typically possess?
-*Maintenance:* Conducting maintenance activities, such as updating software and its dependencies to ensure system reliability and performance.
+* What expertise does an operator typically possess?
+* *Maintenance:* Conducting maintenance activities, such as updating software and its dependencies to ensure system reliability and performance.
 --
 
 === Maintenance
@@ -81,7 +81,7 @@ Renovate
 
 Keep track of all dependencies
 
-image::images/maintenance-renovate.png[width="50%"]
+image::images/maintenance-renovate.png[]
 
 [.notes]
 --
@@ -95,7 +95,7 @@ Automate everything
 
 Tests => Merge => Release => Rollout
 
-image::images/pipeline.png[width="50%"]
+image::images/pipeline.png[]
 
 [.notes]
 --
@@ -107,7 +107,7 @@ image::images/pipeline.png[width="50%"]
 
 === Monitoring
 
-image::images/monitoring.png[width="100%"]
+image::images/monitoring.png[]
 
 [.notes]
 --
@@ -129,7 +129,7 @@ image::images/monitoring.png[width="100%"]
 
 Client configuration and onboarding
 
-image::images/client-manifest.png[width="50%"]
+image::images/client-manifest.png[]
 
 [.notes]
 --
@@ -152,11 +152,31 @@ image::images/client-manifest.png[width="50%"]
 
 Self-Service
 
-image::images/keycloak-client.png[width="50%"]
+image::images/keycloak-client-1.png[]
 
 [.notes]
 --
 * Using fine grained permissions this can be done using the keycloak console.
+--
+
+=== The Application Owner
+
+Manage Roles
+
+image::images/keycloak-client-2.png[]
+
+[.notes]
+--
+--
+
+=== The Application Owner
+
+Assign Roles
+
+image::images/keycloak-client-3.png[]
+
+[.notes]
+--
 --
 
 == The User
