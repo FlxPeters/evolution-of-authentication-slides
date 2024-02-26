@@ -196,13 +196,22 @@ image::images/login.png[width="50%"]
 
 == Conclusion
 
-Punch-Line→ (Was ist unsere Message? You can do it!)
+Our Accomplishments
+
+[%notitle]
+== Conclusion-content
+
+* **Enhanced Security Through Role Streamlining**: +
+  Ensuring Comfort and Efficiency for All
+* **Automation Drives Security:** +
+  Eliminating Manual Tasks, Empowering Every Role
+* **User-Centric Security:** +
+  Simplified Access with a Single Sign-On Solution
+
+**Keycloak: The Foundation Enabling Our Success**
 
 [.notes]
 --
 --
 
-[%notitle]
-== hiring
-
-We are hiring!
+== You can do it too!
