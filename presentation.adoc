@@ -21,7 +21,6 @@ A Keycloak Success Story
 * Inconsistent password strength
 * Lack of comprehensive audit trails
 
-
 [%notitle]
 === MFA
 
@@ -45,20 +44,21 @@ A Keycloak Success Story
 
 We're here to guide you through the path to liberation.
 
-
 == Introducing: Breuninger ID
 
-=== The Vision 
+The Vision: Unlocking a New Era
+
+=== The Vision: Unlocking a New Era
 [.notes]
 --
 --
 
-* End-to-End Self service (Details in the following slides)
-* The Least Privilege by default
-* Automatable and secure
-* OIDC/SAML (vs LDAP)
-* Consistent Login (vs by Application)
-* Client Roles (vs global LDAP groups)
+* End-to-End Self Service: Empowering Users
+* Embracing Least Privilege by Default
+* Automation: The Key to Security and Efficiency
+* Transitioning from LDAP to OIDC/SAML for Enhanced Security
+* Consistent Login Experience Across Platforms
+* Implementing Client Roles to Replace Global LDAP Groups
 
 == Streamlining Responsibilities
 
