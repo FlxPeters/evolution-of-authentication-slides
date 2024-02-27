@@ -183,7 +183,7 @@ image::images/keycloak-client-3.png[]
 
 The last login form
 
-image::images/login.png[width="50%"]
+image::images/login.png[width=80%]
 
 [.notes]
 --
@@ -192,6 +192,26 @@ image::images/login.png[width="50%"]
 * When ever he is confronted with a different type of login form he should immediately get suspicious
 
 * Configure / show several MFA mechanisms
+--
+
+=== The User
+
+Update personal information
+
+image::images/user-info.png[width=80%]
+
+[.notes]
+--
+--
+
+=== The User
+
+Change password, configure MFA
+
+image::images/user-credentials.png[width=80%]
+
+[.notes]
+--
 --
 
 == Conclusion
