@@ -5,7 +5,7 @@
   "main": "reveal.js",
   "scripts": {
     "preview": "node preview.js presentation.adoc",
-    "build": "npx asciidoctor-revealjs presentation.adoc"
+    "build": "npx asciidoctor-revealjs presentation.adoc -o docs/index.html"
   },
   "keywords": [],
   "author": "",
