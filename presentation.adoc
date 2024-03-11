@@ -46,13 +46,14 @@ We're here to guide you through the path to liberation.
 
 == Introducing: Breuninger ID
 
-The Vision: Unlocking a New Era
+The Vision
 
-=== The Vision: Unlocking a New Era
+=== The Vision
 [.notes]
 --
 --
 
+[%step]
 * End-to-End Self Service: Empowering Users
 * Embracing Least Privilege by Default
 * Automation: The Key to Security and Efficiency
@@ -67,7 +68,17 @@ The Vision: Unlocking a New Era
 * In the upcoming slides, I'll discuss how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage effectively.
 --
 
-== The Operator
+Enhance overall security by optimizing responsibilities for each role
+
+[%notitle]
+
+[%step]
+* 👨🏼‍🔧 The Operator
+* 👨‍💻 The Developer
+* 👨‍💼 The Application Owner
+* 🙋‍♂️ The User
+
+== 👨🏼‍🔧 The Operator
 
 [.notes]
 --
@@ -77,9 +88,7 @@ The Vision: Unlocking a New Era
 
 === Maintenance
 
-Renovate
-
-Keep track of all dependencies
+Renovate - Keep track of all dependencies
 
 image::images/maintenance-renovate.png[]
 
@@ -117,7 +126,7 @@ image::images/monitoring.png[]
 * If for example the login error rate goes up really quickly we fire an alert so the operator can make sure keycloak still behaves
 --
 
-== The Developer
+== 👨‍💻 The Developer
 
 [.notes]
 --
@@ -141,7 +150,7 @@ image::images/client-manifest.png[]
 *** Unmanaged clients receive only the essential setup from the factory, leaving the finer details of configuration to the application owner's discretion.
 --
 
-== The Application Owner
+== 👨‍💼 The Application Owner
 
 [.notes]
 --
@@ -179,7 +188,7 @@ image::images/keycloak-client-3.png[]
 --
 --
 
-== The User
+== 🙋‍♂️ The User
 
 The last login form
 
