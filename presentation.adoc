@@ -9,8 +9,14 @@ A Keycloak Success Story
 :customcss: custom.css
 :revealjs_history: true
 :icons: font
-:revealjs_totalTime: 900
+// 20 minutes
+:revealjs_totalTime: 1200
 :source-highlighter: highlight.js
+:revealjs_transition: slide
+
+:revealjs_width: 1200
+
+:revealjs_pdfseparatefragments: false
 
 == Origins: Our Starting Point
 
@@ -21,20 +27,27 @@ A Keycloak Success Story
 * Inconsistent password strength
 * Lack of comprehensive audit trails
 
-[%notitle]
-=== MFA
+=== But there is more...
 
 [%step]
 * Limited to no utilization of multifactor authentication
 * Dependence on LDAP with globally shared groups across applications
 * Direct login through application interfaces
 
+[.notes]
+--
+* This is bad - but quiet common for small and medium sized companies
+* Traditional setup with Active Directory, Windows-centric, handicrafted.
+* That has evolved historically, and we don't want to blame anyone.
+
+**Action: Raise your hand if you have ever been in a similar situation!**
+--
+
 [%notitle]
 [%auto-animate,auto-animate-duration=2]
 === Hope
 // Just a little bit of animation foo
 *However, there is a light at the end of the tunnel!*
-
 
 [%notitle]
 [%auto-animate,auto-animate-duration=2]
@@ -51,15 +64,19 @@ The Vision
 === The Vision
 [.notes]
 --
+* Handover to Sascha
+** He goes into detail on how we implement this vision
 --
 
 [%step]
+* Transitioning from LDAP to OIDC/SAML for enhanced security
 * End-to-End Self Service: Empowering Users
-* Embracing Least Privilege by Default
-* Automation: The Key to Security and Efficiency
-* Transitioning from LDAP to OIDC/SAML for Enhanced Security
-* Consistent Login Experience Across Platforms
-* Implementing Client Roles to Replace Global LDAP Groups
+* Consistent login experience across platforms
+* Implementing client roles to replace global LDAP groups
+** Embracing Least Privilege by Default
+* Enabling multifactor authentication
+
+// Handover to Sascha
 
 == Streamlining Responsibilities
 
