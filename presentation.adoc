@@ -103,7 +103,7 @@ Enhance overall security by optimizing responsibilities for each role
 * *Maintenance:* Conducting maintenance activities, such as updating software and its dependencies to ensure system reliability and performance.
 --
 
-=== Maintenance
+=== Dependencies / Updates
 
 Renovate - Keep track of all dependencies
 
@@ -115,7 +115,7 @@ image::images/maintenance-renovate.png[]
   * Renovate automatically opens merge requests in our git repository for every update.
 --
 
-=== Maintenance
+=== Rollout
 
 Automate everything
 
@@ -174,9 +174,9 @@ image::images/client-manifest.png[]
 * Only the application owner has the necessary insight to reasonably determine access privileges for their application, making them uniquely qualified for this responsibility—neither helpdesk staff nor operators are equipped to make these decisions.
 --
 
-=== The Application Owner
+=== Self-Service
 
-Self-Service
+On- and Off-boarding
 
 image::images/keycloak-client-1.png[]
 
@@ -185,21 +185,11 @@ image::images/keycloak-client-1.png[]
 * Using fine grained permissions this can be done using the keycloak console.
 --
 
-=== The Application Owner
+=== Manage Roles
 
-Manage Roles
+Grant or revoke privileges
 
 image::images/keycloak-client-2.png[]
-
-[.notes]
---
---
-
-=== The Application Owner
-
-Assign Roles
-
-image::images/keycloak-client-3.png[]
 
 [.notes]
 --
@@ -220,7 +210,7 @@ image::images/login.png[width=80%]
 * Configure / show several MFA mechanisms
 --
 
-=== The User
+=== Personal Information
 
 Update personal information
 
@@ -230,7 +220,7 @@ image::images/user-info.png[width=80%]
 --
 --
 
-=== The User
+=== Update Credentials
 
 Change password, configure MFA
 
