@@ -1,6 +1,6 @@
 [.title]
 = The Evolution of Authentication
-Sascha Schmidt & Felix Peters
+Sascha Schmidt & Felix Peters - E. Breuninger GmbH & Co
 
 // Intro / Names / Company
 A Keycloak Success Story 
@@ -22,23 +22,35 @@ A Keycloak Success Story
 
 [%step]
 * Emergence from a fragmented landscape of user pools and varied credentials
+* Inconsistent authentication strength
 * Challenges in onboarding and offboarding experiences
-* Issues stemming from reused passwords
-* Inconsistent password strength
+* Manual tasks for Helpdesk and Support personnel
 * Lack of comprehensive audit trails
+
+[.notes]
+--
+* Short wrap up of the histroy and groth, digitalization of fashion and online sales.
+* From a local on side retailer to an european ecommerce bussiness
+** Several yeas ago, there was Lotus Notes and Blackberries
+** Now we have a service landscape base don the old wold of authentication
+--
 
 === But there is more...
 
 [%step]
 * Limited to no utilization of multifactor authentication
 * Dependence on LDAP with globally shared groups across applications
-* Direct login through application interfaces
+* No implementation of the principle of least privilege.
+
+[%step]
+__The antithesis of modern IT security__ 😞
 
 [.notes]
 --
 * This is bad - but quiet common for small and medium sized companies
 * Traditional setup with Active Directory, Windows-centric, handicrafted.
 * That has evolved historically, and we don't want to blame anyone.
+* Everyone told us - This is not solveable. 
 
 **Action: Raise your hand if you have ever been in a similar situation!**
 --
@@ -47,34 +59,37 @@ A Keycloak Success Story
 [%auto-animate,auto-animate-duration=2]
 === Hope
 // Just a little bit of animation foo
-*However, there is a light at the end of the tunnel!*
+*There is a light at the end of the tunnel!*
 
 [%notitle]
 [%auto-animate,auto-animate-duration=2]
 === Hope-2
 
-*However, there is a light at the end of the tunnel!*
+*There is a light at the end of the tunnel!*
 
 We're here to guide you through the path to liberation.
 
 == Introducing: Breuninger ID
 
-The Vision
-
-=== The Vision
-[.notes]
---
-* Handover to Sascha
-** He goes into detail on how we implement this vision
---
-
 [%step]
 * Transitioning from LDAP to OIDC/SAML for enhanced security
-* End-to-End Self Service: Empowering Users
+* End-to-End Self Service - from onboarding to offboarding
 * Consistent login experience across platforms
-* Implementing client roles to replace global LDAP groups
+* Implementing self-managed client roles to replace global LDAP groups
 ** Embracing Least Privilege by Default
 * Enabling multifactor authentication
+
+[%notitle]
+=== The Solution
+
+image::images/Keycloak-logo.png[alt=Keycloak]
+
+[.notes]
+--
+* Handover to Sascha after this slide
+** He goes into detail on how we implement this vision
+** Our key benefits from using a open solution like keycloak
+--
 
 // Handover to Sascha
 
@@ -103,11 +118,11 @@ Enhance overall security by optimizing responsibilities for each role
 * *Maintenance:* Conducting maintenance activities, such as updating software and its dependencies to ensure system reliability and performance.
 --
 
-=== Dependencies / Updates
+=== Responsibility: Maintenance
 
 Renovate - Keep track of all dependencies
 
-image::images/maintenance-renovate.png[]
+image::images/maintenance-renovate.png[alt=Renovate,height=500]
 
 [.notes]
 --
