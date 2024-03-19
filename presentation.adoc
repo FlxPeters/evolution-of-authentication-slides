@@ -97,7 +97,7 @@ image::images/Keycloak-logo.png[alt=Keycloak]
 
 [.notes]
 --
-* In the upcoming slides, I'll discuss how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage effectively.
+* In the upcoming slides, I'll talk about how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage.
 --
 
 Enhance overall security by optimizing responsibilities for each role
@@ -107,7 +107,7 @@ Enhance overall security by optimizing responsibilities for each role
 [.notes]
 --
 * What expertise does an operator typically possess?
-* *Maintenance:* Conducting maintenance activities, such as updating software and its dependencies to ensure system reliability and performance.
+* I'd say it is conducting maintenance activities, such as updating software and it's dependencies to ensure system reliability and performance.
 --
 
 === Dependencies
@@ -118,7 +118,7 @@ image::images/maintenance-renovate.png[alt=Renovate,height=500]
 
 [.notes]
 --
-* To keep track of all the updates we are using renovate.
+* To keep track of all the dependencies like Container, OLM, Maven et cetera and their updates we are using renovate.
   * Renovate automatically opens merge requests in our git repository for every update.
 --
 
@@ -133,7 +133,7 @@ image::images/pipeline.png[]
 [.notes]
 --
 * We have automated pipelines and tests in place that will automatically test every merge request
-* If the pipeline succeeds the merge request will automatically be merged to master
+* For minor and patch updates, if the pipeline succeeds the merge request will automatically be merged to master
 * On the master branch a new release will automatically be produced using semantic release
 * This release is going to be deployed to production automatically
 --
@@ -144,7 +144,7 @@ image::images/monitoring.png[]
 
 [.notes]
 --
-* Setting up and fine-tuning monitoring systems to proactively identify potential issues or to ensure critical problems do not go unnoticed.
+* To identify potential issues and to ensure critical problems do not go unnoticed we set up and fine tuned a monitoring system.
 * We are using prometheus and grafana for that purpose
 * We keep track of logins per client, http errors, login errors and response times
 * If for example the login error rate goes up really quickly we fire an alert so the operator can make sure keycloak still behaves
@@ -155,7 +155,7 @@ image::images/monitoring.png[]
 [.notes]
 --
 * Developers are the ideal choice for client onboarding, thanks to their in-depth knowledge of OIDC/SAML implementations, which ensures a seamless and tailored integration for each client.
-* A well-defined user model, complete with consistent attributes, facilitates a more organized and efficient onboarding experience.
+* A well-defined user model, complete with consistent attributes, ensures a more organized and efficient onboarding experience.
 --
 
 === The Developer
@@ -200,14 +200,20 @@ image::images/keycloak-client-2.png[[alt=Renovate,height=500]
 
 [.notes]
 --
-As an application owner you probably do not want to grant equal rights to everyone.
-And thats fine as long as there is a technical reason.
-Using Keycloak the application owner can do that him self.
+* As an application owner you probably do not want to grant equal rights to everyone.
+* And thats fine as long as there is a technical reason.
+* Using Keycloak the application owner can do that him self.
 --
 
-== 🙋‍♂️ The User
+== 🙋‍♂️ The Employee
 
-The last login form
+[.notes]
+--
+* You want your users to not reuse credentials on multiple userbases
+* Classic LDAP integration makes it hard for the user to figure out wether to use their company credentials or when they need to use individual credentials.
+--
+
+=== The last login form
 
 image::images/login.png[alt=Renovate,height=500]
 
@@ -216,8 +222,6 @@ image::images/login.png[alt=Renovate,height=500]
 * This is the only login screen an employee at Breuninger should ever face
 * The login will always be under the same URL
 * When ever he is confronted with a different type of login form he should immediately get suspicious
-
-* Configure / show several MFA mechanisms
 --
 
 === Personal Information
@@ -228,8 +232,8 @@ image::images/user-info.png[alt=Renovate,height=500]
 
 [.notes]
 --
-Employees get enabled to update their personal information like their name or the preferred language.
-Though usualy it makes more sense to update things like their name via the HR department.
+* Employees get enabled to update their personal information like their name or the preferred language.
+* Though, honestly, it usualy makes more sense to update things like the name via the HR department.
 --
 
 === Update Credentials
@@ -240,7 +244,7 @@ image::images/user-credentials.png[alt=Renovate,height=500]
 
 [.notes]
 --
-They can as well change their password or add multi factor devices like TOTP applications or passkeys themself.
+* The user can as well change their password or add multi factor devices like TOTP applications or passkeys themself.
 --
 
 == Conclusion
