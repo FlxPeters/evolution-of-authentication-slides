@@ -97,7 +97,7 @@ image::images/Keycloak-logo.png[alt=Keycloak]
 
 [.notes]
 --
-* In the upcoming slides, I'll talk about how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage.
+* On the upcoming slides, I'll talk about how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage.
 --
 
 Enhance overall security by optimizing responsibilities for each role
@@ -118,7 +118,7 @@ image::images/maintenance-renovate.png[alt=Renovate,height=500]
 
 [.notes]
 --
-* To keep track of all the dependencies like Container, OLM, Maven et cetera and their updates we are using renovate.
+* To keep track of all the dependencies like Container, Operator Lifecycle Manager, Maven et cetera and their updates we are using renovate.
   * Renovate automatically opens merge requests in our git repository for every update.
 --
 
