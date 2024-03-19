@@ -102,14 +102,6 @@ image::images/Keycloak-logo.png[alt=Keycloak]
 
 Enhance overall security by optimizing responsibilities for each role
 
-[%notitle]
-
-[%step]
-* 👨🏼‍🔧 The Operator
-* 👨‍💻 The Developer
-* 👨‍💼 The Application Owner
-* 🙋‍♂️ The User
-
 == 👨🏼‍🔧 The Operator
 
 [.notes]
@@ -118,7 +110,7 @@ Enhance overall security by optimizing responsibilities for each role
 * *Maintenance:* Conducting maintenance activities, such as updating software and its dependencies to ensure system reliability and performance.
 --
 
-=== Responsibility: Maintenance
+=== Dependencies
 
 Renovate - Keep track of all dependencies
 
@@ -146,7 +138,7 @@ image::images/pipeline.png[]
 * This release is going to be deployed to production automatically
 --
 
-=== Monitoring
+=== Observability
 
 image::images/monitoring.png[]
 
@@ -170,7 +162,7 @@ image::images/monitoring.png[]
 
 Client configuration and onboarding
 
-image::images/client-manifest.png[]
+image::images/client-manifest.png[[alt=Renovate,height=500]
 
 [.notes]
 --
@@ -193,28 +185,31 @@ image::images/client-manifest.png[]
 
 On- and Off-boarding
 
-image::images/keycloak-client-1.png[]
+image::images/keycloak-client-1.png[[alt=Renovate,height=500]
 
 [.notes]
 --
-* Using fine grained permissions this can be done using the keycloak console.
+* Using fine grained permissions the onboarding and - probably more important - the offboarding can be done using the keycloak console.
 --
 
 === Manage Roles
 
 Grant or revoke privileges
 
-image::images/keycloak-client-2.png[]
+image::images/keycloak-client-2.png[[alt=Renovate,height=500]
 
 [.notes]
 --
+As an application owner you probably do not want to grant equal rights to everyone.
+And thats fine as long as there is a technical reason.
+Using Keycloak the application owner can do that him self.
 --
 
 == 🙋‍♂️ The User
 
 The last login form
 
-image::images/login.png[width=80%]
+image::images/login.png[alt=Renovate,height=500]
 
 [.notes]
 --
@@ -229,20 +224,23 @@ image::images/login.png[width=80%]
 
 Update personal information
 
-image::images/user-info.png[width=80%]
+image::images/user-info.png[alt=Renovate,height=500]
 
 [.notes]
 --
+Employees get enabled to update their personal information like their name or the preferred language.
+Though usualy it makes more sense to update things like their name via the HR department.
 --
 
 === Update Credentials
 
 Change password, configure MFA
 
-image::images/user-credentials.png[width=80%]
+image::images/user-credentials.png[alt=Renovate,height=500]
 
 [.notes]
 --
+They can as well change their password or add multi factor devices like TOTP applications or passkeys themself.
 --
 
 == Conclusion
