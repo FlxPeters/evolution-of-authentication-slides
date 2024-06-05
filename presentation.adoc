@@ -98,6 +98,7 @@ image::images/Keycloak-logo.png[alt=Keycloak]
 [.notes]
 --
 * On the upcoming slides, I'll talk about how we successfully streamlined responsibilities, ensuring that everyone is tasked with roles they are genuinely equipped to manage.
+* Übersicht darüber wie wir die Verantwortlichkeiten so optimiert haben dass jeder die Aufgaben bekommt für die er die Verantwortung übernehmen kann
 --
 
 Enhance overall security by optimizing responsibilities for each role
@@ -108,6 +109,8 @@ Enhance overall security by optimizing responsibilities for each role
 --
 * What expertise does an operator typically possess?
 * I'd say it is conducting maintenance activities, such as updating software and it's dependencies to ensure system reliability and performance.
+* Welche Skills erwarten wir in der Regel von einem Operator?
+* Ich würde sagen, Konfiguration, Betrieb und Wartung von Services
 --
 
 === Dependencies
@@ -118,8 +121,8 @@ image::images/maintenance-renovate.png[alt=Renovate,height=500]
 
 [.notes]
 --
-* To keep track of all the dependencies like Container, Operator Lifecycle Manager, Maven et cetera and their updates we are using renovate.
-  * Renovate automatically opens merge requests in our git repository for every update.
+* To keep track of all the *dependencies like Container, Operator Lifecycle Manager, Maven* et cetera and their updates we are using renovate.
+  * Renovate *automatically opens merge requests* in our git repository for every update.
 --
 
 === Rollout
@@ -132,10 +135,10 @@ image::images/pipeline.png[]
 
 [.notes]
 --
-* We have automated pipelines and tests in place that will automatically test every merge request
-* For minor and patch updates, if the pipeline succeeds the merge request will automatically be merged to master
-* On the master branch a new release will automatically be produced using semantic release
-* This release is going to be deployed to production automatically
+* We have *automated pipelines and tests* in place that will automatically test every merge request
+* For *minor and patch updates*, if the pipeline succeeds the merge request will *automatically be merged* to master
+* On the master branch a *new release will automatically* be produced using *semantic release*
+* This release is going to be *deployed to production automatically*
 --
 
 === Observability
@@ -144,18 +147,18 @@ image::images/monitoring.png[]
 
 [.notes]
 --
-* To identify potential issues and to ensure critical problems do not go unnoticed we set up and fine tuned a monitoring system.
-* We are using prometheus and grafana for that purpose
-* We keep track of logins per client, http errors, login errors and response times
-* If for example the login error rate goes up really quickly we fire an alert so the operator can make sure keycloak still behaves
+* To identify *potential issues* and to ensure *critical problems* do not go unnoticed we set up and fine tuned a monitoring system.
+* We are using *prometheus and grafana* for that purpose
+* We keep *track of logins per client*, *http errors*, *login errors* and *response times*
+* If for example the *login error rate goes up really quickly* we fire an alert so the operator can make sure keycloak still behaves
 --
 
 == 👨‍💻 The Developer
 
 [.notes]
 --
-* Developers are the ideal choice for client onboarding, thanks to their in-depth knowledge of OIDC/SAML implementations, which ensures a seamless and tailored integration for each client.
-* A well-defined user model, complete with consistent attributes, ensures a more organized and efficient onboarding experience.
+* Developers are the *deal choice for client onboarding*, thanks to their *in-depth knowledge of OIDC/SAML* implementations, which ensures a seamless and tailored integration for each client.
+* A *well-defined user model*, complete with *consistent attributes*, ensures a more organized and efficient onboarding experience.
 --
 
 === The Developer
@@ -166,19 +169,21 @@ image::images/client-manifest.png[[alt=Renovate,height=500]
 
 [.notes]
 --
-* To simplify the process, we developed a solution named "The Client Factory."
-** Developers can submit their client configuration by creatign a pull request
-** We utilized `jsonschema` to establish a Kubernetes-style manifest for clients, ensuring structured and consistent client configurations.
-** Clients can be categorized as either managed or unmanaged:
-*** Managed clients are fully configured via these manifests, offering a hands-off approach for seamless integration.
-*** Unmanaged clients receive only the essential setup from the factory, leaving the finer details of configuration to the application owner's discretion.
+* To simplify the process, we developed a solution named "*The Client Factory.*"
+** *Developers* can submit their *client configuration* by creatign a *pull request*
+** We utilized *`jsonschema`* to establish a *Kubernetes-style manifest for clients*, ensuring structured and consistent client configurations.
+** Clients can be categorized as either *managed or unmanaged*:
+*** *Managed* clients are *fully configured* via these manifests, offering a hands-off approach for seamless integration.
+*** *Unmanaged* clients receive only the *essential setup from the factory*, leaving the finer details of configuration to the application owner's discretion.
 --
 
 == 👨‍💼 The Application Owner
 
 [.notes]
 --
-* Only the application owner has the necessary insight to reasonably determine access privileges for their application, making them uniquely qualified for this responsibility—neither helpdesk staff nor operators are equipped to make these decisions.
+* Only the *application owner* has the necessary insight to reasonably determine access privileges for their application, making them uniquely qualified for this responsibility—neither helpdesk staff nor operators are equipped to make these decisions.
+* hat notwendige Einsicht um Zugriffsberechtigungen vernünftig festzulegen
+* Weder Helpdesk-Mitarbeiter noch Operator sind in der Lage diese Entscheidungen zu treffen
 --
 
 === Self-Service
@@ -190,6 +195,7 @@ image::images/keycloak-client-1.png[[alt=Renovate,height=500]
 [.notes]
 --
 * Using fine grained permissions the onboarding and - probably more important - the offboarding can be done using the keycloak console.
+* onboarding / offboarding(!) kann in der Keycloak Console umgesetzt werden
 --
 
 === Manage Roles
@@ -200,17 +206,18 @@ image::images/keycloak-client-2.png[[alt=Renovate,height=500]
 
 [.notes]
 --
-* As an application owner you probably do not want to grant equal rights to everyone.
-* And thats fine as long as there is a technical reason.
+* As an *application owner* you probably do *not* want to grant *equal rights* to everyone.
+* And thats fine as long as there is a *technical reason*.
 * Using Keycloak the application owner can do that him self.
+
 --
 
 == 🙋‍♂️ The Employee
 
 [.notes]
 --
-* You want your users to not reuse credentials on multiple userbases
-* Classic LDAP integration makes it hard for the user to figure out wether to use their company credentials or when they need to use individual credentials.
+* You want your users to *not reuse credentials on multiple userbases*
+* *Classic LDAP* integration makes it hard for the user to figure out wether to use their company credentials or when they need to use individual credentials.
 --
 
 === The last login form
@@ -219,9 +226,9 @@ image::images/login.png[alt=Renovate,height=500]
 
 [.notes]
 --
-* This is the only login screen an employee at Breuninger should ever face
-* The login will always be under the same URL
-* When ever he is confronted with a different type of login form he should immediately get suspicious
+* This is the *only login screen* an employee at Breuninger should ever face
+* The login will always be under the *same URL*
+* When ever he is confronted with a *different type of login* form he should immediately get *suspicious*
 --
 
 === Personal Information
